@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Element } from 'react-scroll';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -20,8 +21,10 @@ function Contact() {
     console.log(formData);
   };
 
+
+
   return (
-    <div>
+    <Element name="contact-section" className="section contact-section">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -38,7 +41,7 @@ function Contact() {
         </div>
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </Element>
   );
 }
 

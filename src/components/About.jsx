@@ -1,8 +1,9 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 function About() {
   return (
-    <div>
+    <Element name="about-section" className="section about-section">
       <h2>About Our Church</h2>
       <p>Our church is a place of worship, fellowship, and outreach. We believe in bringing the love of Christ to our community and the world.</p>
       <h3>Mission and Vision</h3>
@@ -13,7 +14,7 @@ function About() {
         <li>Associate Pastor Jane Smith</li>
         <li>Youth Pastor Tom Brown</li>
       </ul>
-    </div>
+    </Element>
   );
 }
 

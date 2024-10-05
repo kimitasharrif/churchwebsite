@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Section styling */
+.section {
+  padding: 100px 20px;
+  min-height: 100vh; /* Each section takes up at least the full height of the viewport */
+  margin-bottom: 50px; /* Add spacing between sections */
+  border-bottom: 1px solid #ccc; /* Optional: add a subtle border to separate sections */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Optional: Distinct background colors for each section to simulate separate pages */
+.home-section {
+  background-color: #fff; /* White */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about-section {
+  background-color: #f4f4f9; /* Light gray */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.ministries-section {
+  background-color: #fff; /* White */
+}
+
+.events-section {
+  background-color: #f9f9f9; /* Slightly different light gray */
+}
+
+.sermons-section {
+  background-color: #f4f4f9; /* Light gray */
+}
+
+.giving-section {
+  background-color: #fff; /* White */
+}
+
+.contact-section {
+  background-color: #f9f9f9; /* Slightly different light gray */
+}
+
+/* Header styles */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
   color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.church-name {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-right: auto;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Body padding to account for the fixed header */
+body {
+  padding-top: 70px; /* Adjust based on your header height */
 }
