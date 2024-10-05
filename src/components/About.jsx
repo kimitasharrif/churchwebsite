@@ -10,8 +10,8 @@ function About() {
       <p>Our mission is to spread the Gospel and to serve others with the love of Jesus Christ.</p>
       <h3>Leadership Team</h3>
       <ul>
-        <li>Pastor John Doe</li>
-        <li>Associate Pastor Jane Smith</li>
+        <li>Senior Pastor: Peter Ndambuki</li>
+        <li>Associate Pastor William Wasonga</li>
         <li>Youth Pastor Tom Brown</li>
       </ul>
     </Element>

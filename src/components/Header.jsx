@@ -11,10 +11,9 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <img src={logo} alt="Church Logo" className="logo" />
-        <h1 className="church-name">PEFA KAYOLE B CHURCH</h1>
+        <h1 className="church-name">ALL NATIONS-PEFA CHURCH KAYOLE B</h1>
         <nav>
           <ul className="nav-links">
-            {/* Use smooth scroll links if on Home, otherwise normal links */}
             {location.pathname === '/' ? (
               <>
                 <li>
@@ -38,26 +37,26 @@ function Header() {
                   </ScrollLink>
                 </li>
                 <li>
-                  <ScrollLink to="giving-section" smooth={true} duration={500}>
-                    Giving
-                  </ScrollLink>
-                </li>
-                <li>
                   <ScrollLink to="contact-section" smooth={true} duration={500}>
                     Contact
+                  </ScrollLink>
+                </li>
+                {/* Add a unique class to the Giving link */}
+                <li>
+                  <ScrollLink to="giving-section" smooth={true} duration={500} className="giving-link">
+                    Giving
                   </ScrollLink>
                 </li>
               </>
             ) : (
               <>
-                {/* Normal links for other pages */}
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/ministries">Ministries</Link></li>
                 <li><Link to="/events">Events</Link></li>
                 <li><Link to="/sermons">Sermons</Link></li>
-                <li><Link to="/giving">Giving</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/giving" className="giving-link">Giving</Link></li> {/* Unique class */}
               </>
             )}
           </ul>

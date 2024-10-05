@@ -9,9 +9,37 @@
 }
 
 /* Optional: Distinct background colors for each section to simulate separate pages */
+/* App.css */
+
+/* Home Section with Background Image */
 .home-section {
-  background-color: #fff; /* White */
+  background-image: url('/src/assets/bg/Jesusbg.jpg'); /* Replace with your image path */
+  background-size: cover;           /* Cover the entire section */
+  background-position: center;      /* Center the image */
+  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */
+  color: white;                     /* Text color over the background */
+  text-align: center;               /* Center the text */
+  padding: 150px 20px;              /* Add padding to the section */
+  min-height: 100vh;                /* Make the section take up the entire viewport height */
 }
+
+/* Styling for other sections */
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+.home-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 
 .about-section {
   background-color: #f4f4f9; /* Light gray */
@@ -95,3 +123,103 @@
 body {
   padding-top: 70px; /* Adjust based on your header height */
 }
+/* General navigation styling */
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links li a, .nav-links li .giving-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Giving Link - Special Anticeblue Background */
+.giving-link {
+  background-color: #ee840b; /* Anticeblue color */
+  border-radius: 4px;
+  color: #ee840b; /* Matching text color */
+}
+
+.giving-link:hover {
+  background-color: #b0e3f8; /* Slightly darker blue on hover */
+  color: #0056b3; /* Darker blue text on hover */
+}
+
+
+
+
+
+
+/* footerstyling */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* contact form */
+
