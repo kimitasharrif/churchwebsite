@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import '../App.css'; // Unified styling
+import logo from '../assets/logo/transparent_pefa_logo.png';
 
 function Header() {
   const location = useLocation();
@@ -9,7 +10,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <img src="/assets/logo/transparent_pefa_logo.png" alt="Church Logo" className="logo" />
+        <img src={logo} alt="Church Logo" className="logo" />
         <h1 className="church-name">PEFA KAYOLE B CHURCH</h1>
         <nav>
           <ul className="nav-links">
