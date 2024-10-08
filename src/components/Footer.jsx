@@ -35,22 +35,23 @@ function Footer() {
           <h2>Contact Us</h2>
           <p><strong>Email:</strong> pefakayoleb@gmail.com</p>
           <p><strong>Phone:</strong> +123 456 7890</p>
+          <p>PEFA/Raster Stage Kayole, Nairobi, Kenya</p>
           <h5>follow us in social media:</h5>
 
           <div className="social-media-links" style={styles.iconContainer}>
-            <a href="https://www.youtube.com/your-channel" target="_blank" rel="noopener noreferrer" style={styles.youtube}>
+            <a href="https://www.youtube.com/@pkb_church" target="_blank" rel="noopener noreferrer" style={styles.youtube}>
               <FontAwesomeIcon icon={faYoutube} size="2x" />
             </a>
-            <a href="https://www.tiktok.com/@your-username" target="_blank" rel="noopener noreferrer" style={styles.tiktok}>
+            <a href="https://www.tiktok.com/@pkb_church" target="_blank" rel="noopener noreferrer" style={styles.tiktok}>
               <FontAwesomeIcon icon={faTiktok} size="2x" />
             </a>
-            <a href="https://www.instagram.com/your-username" target="_blank" rel="noopener noreferrer" style={styles.instagram}>
+            <a href="https://www.instagram.com/pkb_church/" target="_blank" rel="noopener noreferrer" style={styles.instagram}>
               <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
             <a href="https://wa.me/your-phonenumber" target="_blank" rel="noopener noreferrer" style={styles.whatsapp}>
               <FontAwesomeIcon icon={faWhatsapp} size="2x" />
             </a>
-            <a href="https://www.facebook.com/your-username" target="_blank" rel="noopener noreferrer" style={styles.facebook}>
+            <a href="https://www.facebook.com/churchpkb/" target="_blank" rel="noopener noreferrer" style={styles.facebook}>
               <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
           </div>
@@ -58,8 +59,12 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Made with love by sherrif.com | All Rights Reserved</p>
-      </div>
+  <p>
+    &copy; {new Date().getFullYear()}  All Rights Reserved              Made with  ❤ 
+     by <a href="https://kimitasharrif.netlify.app/"> sherrif.com </a> 
+  </p>
+</div>
+
     </footer>
   );
 }

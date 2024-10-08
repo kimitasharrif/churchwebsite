@@ -222,4 +222,14 @@ body {
 
 
 /* contact form */
+.love-link {
+  color: red; /* Red color for the love icon */
+  text-decoration: none; /* No underline */
+  font-size: 20px; /* Size of the heart icon */
+}
+
+.love-link:hover {
+  color: darkred; /* Darker red on hover */
+}
+
 
