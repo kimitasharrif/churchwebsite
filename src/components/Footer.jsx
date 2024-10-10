@@ -70,7 +70,7 @@ function Footer() {
 
       <div className="footer-bottom">
   <p>
-    &copy; {new Date().getFullYear()}  All Rights Reserved              Made with  ❤ 
+    &copy; {new Date().getFullYear()}  All Rights Reserved              Made with  <div className='love-link'>❤</div> 
      by <a href="https://kimitasharrif.netlify.app/"> sherrif.com </a> 
   </p>
 </div>

@@ -438,11 +438,11 @@ html, body {
 .love-link {
   color: red; /* Red color for the love icon */
   text-decoration: none; /* No underline */
-  font-size: 20px; /* Size of the heart icon */
+  font-size: 14pxpx; /* Size of the heart icon */
 }
 
 .love-link:hover {
-  color: darkred; /* Darker red on hover */
+  color: red; /* Darker red on hover */
 }
 /* General Form Styling */
 .form-container {
