@@ -9,20 +9,27 @@ import Sermons from './components/Sermons';
 import Giving from './components/Giving';
 import Contact from './components/Contact';
 import './App.css'; // All CSS in this file
+// import './components/styles.css'
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
-      <Header /> {/* The navbar will stay fixed on top */}
-      <Routes>
-        <Route path="/" element={<Home />} /> {/* Home page with scrollable sections */}
-        <Route path="/about" element={<About />} />
-        <Route path="/ministries" element={<Ministries />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/sermons" element={<Sermons />} />
-        <Route path="/giving" element={<Giving />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+ <Router>
+      <div className="container"> {/* Container wrapping header and routes */}
+        <Header /> {/* The navbar will stay fixed on top */}
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} /> {/* Home page with scrollable sections */}
+            <Route path="/about" element={<About />} />
+            <Route path="/ministries" element={<Ministries />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/sermons" element={<Sermons />} />
+            <Route path="/giving" element={<Giving />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer/>
+      </div>
     </Router>
   );
 }

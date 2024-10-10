@@ -1,162 +1,304 @@
-/* App.css */
+/* styles.css */
 
-/* Section styling */
-.section {
-  padding: 100px 20px;
-  min-height: 100vh; /* Each section takes up at least the full height of the viewport */
-  margin-bottom: 50px; /* Add spacing between sections */
-  border-bottom: 1px solid #ccc; /* Optional: add a subtle border to separate sections */
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Optional: Distinct background colors for each section to simulate separate pages */
-/* App.css */
-
-/* Home Section with Background Image */
-.home-section {
-  background-image: url('/src/assets/bg/Jesusbg.jpg'); /* Replace with your image path */
-  background-size: cover;           /* Cover the entire section */
-  background-position: center;      /* Center the image */
-  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */
-  color: white;                     /* Text color over the background */
-  text-align: center;               /* Center the text */
-  padding: 150px 20px;              /* Add padding to the section */
-  min-height: 100vh;                /* Make the section take up the entire viewport height */
-}
-
-/* Styling for other sections */
-.section {
-  padding: 100px 20px;
-  min-height: 100vh;
-}
-
-.home-section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.home-section p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-
-.about-section {
-  background-color: #f4f4f9; /* Light gray */
-}
-
-.ministries-section {
-  background-color: #fff; /* White */
-}
-
-.events-section {
-  background-color: #f9f9f9; /* Slightly different light gray */
-}
-
-.sermons-section {
-  background-color: #f4f4f9; /* Light gray */
-}
-
-.giving-section {
-  background-color: #fff; /* White */
-}
-
-.contact-section {
-  background-color: #f9f9f9; /* Slightly different light gray */
-}
-
-/* Header styles */
-.header {
-  position: fixed;
-  top: 0;
+html, body {
+  height: 100%;
   width: 100%;
-  background-color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Header social section - blue background */
+.header-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff; /* Blue background */
   color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px; /* Keep this padding for internal spacing */
+  margin: 0; /* Ensure no margin around the header */
+  width: 100%; /* Make sure the header takes full width */
 }
 
-.header-content {
+/* Contact Info */
+.contact-info {
   display: flex;
+  align-items: center; /* Align items vertically center */
+  margin-left: 100px; /* Reduce space between contact info and social links */
+}
+
+.contact-info p {
+  margin: 0; /* Remove default margin */
+}
+
+.contact-info a {
+  margin-left: 5px; /* Add a small margin to links */
+  color: white;
+}
+
+.social-media-links {
+  display: flex; /* Ensure links are displayed in a row */
   align-items: center;
+  margin-right: 100px; /* Align social media icons vertically */
+}
+
+.social-media-links a {
+  color: white;
+  margin-left: 20px; /* Reduce space between social media links */
+}
+
+.social-media-links a:hover {
+  color: #ccc;
+}
+
+/* Header menu section - white background */
+.header-menu {
+  display: flex;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.logo-container {
+  display: flex;
+  margin-left: 100px;
+  align-items: center; /* Align logo and name vertically */
 }
 
 .logo {
-  width: 50px;
-  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px; /* Space between logo and church name */
 }
 
 .church-name {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-right: auto;
+  font-size: 24px;
+  font-weight: bold;
+  color: #07bff7;
 }
 
+.menu-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Navigation links */
 .nav-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin-right: 100px;
 }
 
 .nav-links li {
-  margin-right: 20px;
+  margin: 0 15px;
 }
 
 .nav-links li a {
-  color: white;
   text-decoration: none;
-  cursor: pointer;
+  font-weight: bold;
+  color: #333;
 }
 
 .nav-links li a:hover {
-  text-decoration: underline;
+  color: #007bff;
 }
 
-/* Body padding to account for the fixed header */
-body {
-  padding-top: 70px; /* Adjust based on your header height */
-}
-/* General navigation styling */
-.nav-links li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.nav-links li a, .nav-links li .giving-link {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease;
-}
-
-/* Giving Link - Special Anticeblue Background */
 .giving-link {
-  background-color: #ee840b; /* Anticeblue color */
-  border-radius: 4px;
-  color: #ee840b; /* Matching text color */
+  color: #ff6600;
 }
 
-.giving-link:hover {
-  background-color: #b0e3f8; /* Slightly darker blue on hover */
-  color: #0056b3; /* Darker blue text on hover */
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide navigation by default */
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 60px; /* Adjust to align under the header */
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show navigation when menu icon is clicked */
+  }
+
+  .menu-icon {
+    display: block; /* Show hamburger menu on small screens */
+    margin-top: 10px;
+  }
+
+  .header-social {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-media-links {
+    margin-top: 10px;
+  }
+}
+
+
+
+/* Section styling */
+.section {
+  margin-top: 0;
+
+}
+
+/* Home Section with Background Image */
+.home-section {
+ /* Replace with your image path */       /* Cover the entire section */
+  background-position: center;      /* Center the image */
+  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */                  
+  padding: 150px 20px; 
+  margin-left: 100px;
+ margin-right: 100px;
+}
+.home-logo{
+   width: 100%;
+  height: 600px;
+
+}
+
+.about-section {
+  position: relative; /* Allow positioning of the overlay */
+}
+
+.aboutlogo {
+  width: 100%; /* Adjust according to your design */
+}
+
+.about-logo {
+  width: 100%;
+  height: 600px; /* Adjust the height as needed */
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute; /* Position overlay on top of the image */
+  top: 20%; /* Position from the top (adjust as needed) */
+  left: 5%; /* Position from the left side */
+  width: 300px; /* Set a width for the overlay */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white; /* Text color */
+  padding: 20px; /* Padding around text */
+  border-radius: 10px; /* Rounded corners for the overlay */
+  z-index: 1; /* Ensure overlay is above the image */
+}
+
+.overlay h1 {
+  font-size: 24px; /* Font size for the header */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+.overlay p {
+  margin: 5px 0; /* Space between links */
+}
+
+/* Style the links */
+.overlay a {
+  color: #FFD700; /* Change the link color to gold or another color */
+  text-decoration: underline; /* Underline the links */
+}
+
+.about-content {
+  position: relative; /* To keep the content separate from the overlay */
+  z-index: 2; /* Ensure content is above the overlay */
+  padding: 20px; /* Add some padding */
 }
 
 
 
 
+/* Ministries Section with Background Image */
+.ministries-section {
+  /* Replace with your image path */       /* Cover the entire section */
+  background-position: center;      /* Center the image */
+  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */                  
+  padding: 150px 20px; 
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.ministries-logo {
+  width: 100%;
+  height: 600px;
+}
 
 
-/* footerstyling */
+/* Events Section with Background Image */
+.events-section {
+  /* Replace with your image path */       /* Cover the entire section */
+  background-position: center;      /* Center the image */
+  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */                  
+  padding: 150px 20px; 
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.events-logo {
+  width: 100%;
+  height: 600px;
+}
 
+
+
+/* Sermons Section with Background Image */
+.sermons-section {
+  /* Replace with your image path */       /* Cover the entire section */
+  background-position: center;      /* Center the image */
+  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */                  
+  padding: 150px 20px; 
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.sermons-logo {
+  width: 100%;
+  height: 600px;
+}
+
+/* Giving Section with Background Image */
+.giving-section {
+  /* Replace with your image path */       /* Cover the entire section */
+  background-position: center;      /* Center the image */
+  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */                  
+  padding: 150px 20px; 
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.giving-logo {
+  width: 100%;
+  height: 600px;
+}
+
+
+/* Contact Section with Background Image */
+.contact-section {
+  /* Replace with your image path */       /* Cover the entire section */
+  background-position: center;      /* Center the image */
+  background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */                  
+  padding: 150px 20px; 
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.contact-logo {
+  width: 100%;
+  height: 600px;
+}
+
+/* Footer styles */
 .footer {
+ 
   background-color: #333;
   color: #fff;
   padding: 20px 0;
@@ -179,7 +321,8 @@ body {
   margin-bottom: 10px;
 }
 
-.footer-section p, .footer-section ul {
+.footer-section p,
+.footer-section ul {
   font-size: 14px;
   line-height: 1.6;
 }
@@ -218,10 +361,19 @@ body {
   .footer-section {
     margin-bottom: 20px;
   }
+
+  .nav-links {
+    flex-direction: column; /* Stack navigation links vertically on small screens */
+    align-items: center;
+  }
+
+  .social-media-links {
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap social media links */
+  }
 }
 
-
-/* contact form */
+/* Contact form styles */
 .love-link {
   color: red; /* Red color for the love icon */
   text-decoration: none; /* No underline */
@@ -231,5 +383,4 @@ body {
 .love-link:hover {
   color: darkred; /* Darker red on hover */
 }
-
 
