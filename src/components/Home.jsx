@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css'; // Unified styling
-import home from '../assets/bg/mountain.jpg';
+import home from '../assets/bg/churchview.jpg';
 
 function Home() {
   return (

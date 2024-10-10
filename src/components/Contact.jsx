@@ -42,15 +42,16 @@ function Contact() {
         {/* Main Content Section */}
         <div className="section contact-content">
       <div className="form-container">
-        <h2 className="form-heading">Contact Us</h2>
+        <h2 className="form-heading">Get In Touch</h2>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
-            <label htmlFor="name" className="form-label">Name</label>
+            {/* <label htmlFor="name" className="form-label">Name</label> */}
             <input 
               type="text" 
               id="name" 
               name="name" 
               className="form-input" 
+              placeholder="Your Name" // Added placeholder
               onChange={handleChange} 
               value={formData.name} 
               required 
@@ -58,37 +59,52 @@ function Contact() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="email" className="form-label">Email</label>
+            {/* <label htmlFor="email" className="form-label">Email</label> */}
             <input 
               type="email" 
               id="email" 
               name="email" 
               className="form-input" 
+              placeholder="Enter your E-mail" // Added placeholder
               onChange={handleChange} 
               value={formData.email} 
               required 
             />
           </div>
+          <div className="form-group">
+            {/* <label htmlFor="email" className="form-label">Email</label> */}
+            <input 
+              type="text" 
+              id="subject" 
+              name="text" 
+              className="form-input" 
+              placeholder="Your Subject" // Added placeholder
+              onChange={handleChange} 
+              value={formData.subject} 
+              required 
+            />
+          </div>
+
 
           <div className="form-group">
-            <label htmlFor="message" className="form-label">Message</label>
+            {/* <label htmlFor="message" className="form-label">Message</label> */}
             <textarea 
               id="message" 
               name="message" 
               className="form-textarea" 
+              placeholder="Your Comment Write Here..." // Added placeholder
               onChange={handleChange} 
               value={formData.message} 
               required 
             ></textarea>
           </div>
 
-          <button type="submit" className="form-button">Submit</button>
+          <button type="submit" className="form-button">SEND MESSAGE</button>
         </form>
       </div>
       </div>
       </div>
       </>
-    
   );
 }
 

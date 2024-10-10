@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
-import home from '../assets/bg/mountain.jpg';
+import home from '../assets/bg/churchvie.jpg';
 import '../App.css';
 
 function About() {

@@ -8,10 +8,13 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section about">
           <h2>ALL NATIONS-PEFA CHURCH KAYOLE B</h2>
+          <br />
           <h5>P.O BOX 5790-00200 Nairobi.</h5>
           <h5>VISION:</h5>
           <p>Making Disciples of all nations (Matthew 28:19)</p>
+          <br />
           <h5>MISSION STATEMENT:</h5>
+          <br />
           <p>
             To be a church that effectively and rightly declares the message of 
             the scripture that is socially and spiritually relevant, equipping
@@ -21,22 +24,29 @@ function Footer() {
 
         <div className="footer-section links">
           <h2>Quick Links</h2>
+          <br />
           <ul>
             <li><a href="/">Home</a></li>
+            <br />
             <li><a href="#services">Services</a></li>
+            <br />
             <li><a href="/about">About Us</a></li>
+            <br />
             <li><a href="contact">Contact</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
           </ul>
         </div>
 
         <div className="footer-section contact-form">
           <h2>Contact Us</h2>
+          <br />
           <p><strong>Email:</strong> pefakayoleb@gmail.com</p>
+          <br />
           <p><strong>Phone:</strong> +123 456 7890</p>
+          <br />
           <p>PEFA/Raster Stage Kayole, Nairobi, Kenya</p>
+          <br />
           <h5>follow us in social media:</h5>
+          <br /><br />
 
           <div className="social-media-links" style={styles.iconContainer}>
             <a href="https://www.youtube.com/@pkb_church" target="_blank" rel="noopener noreferrer" style={styles.youtube}>
