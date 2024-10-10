@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Element } from 'react-scroll';
+import { Link } from 'react-router-dom'; // Import Link for navigation
+import home from '../assets/bg/mountain.jpg';
 import '../App.css';  // Import your updated styles
 
 function Contact() {
@@ -23,7 +24,23 @@ function Contact() {
   };
 
   return (
-    <Element name="contact-section" className="section contact-section">
+     <>
+      <div className="contact-section">
+        {/* Background Image */}
+        <div className="contactlogo">
+          <img src={home} alt="welcome contact" className="contact-logo" />
+        </div>
+        
+        {/* Overlay for Active Page Text */}
+        <div className="overlay">
+          <h1>Contact Us</h1>
+          <p>
+            <Link to="/">Home</Link> // Contact Us
+          </p>
+        </div>
+
+        {/* Main Content Section */}
+        <div className="section contact-content">
       <div className="form-container">
         <h2 className="form-heading">Contact Us</h2>
         <form onSubmit={handleSubmit} className="contact-form">
@@ -68,7 +85,10 @@ function Contact() {
           <button type="submit" className="form-button">Submit</button>
         </form>
       </div>
-    </Element>
+      </div>
+      </div>
+      </>
+    
   );
 }
 

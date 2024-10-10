@@ -22,7 +22,7 @@ function About() {
 
         {/* Main Content Section */}
         <div className="section about-content">
-          <h2>About Our Church</h2>
+          <h1>About Our Church</h1>
           <br />
           <p>
             Welcome to All Nations-PEFA Church Kayole B, a vibrant community dedicated to empowering individuals and families through faith, fellowship, and service. Nestled in the heart of Kayole, we are committed to nurturing spiritual growth and building strong, resilient families within our community. At All Nations-PEFA Church, we believe in creating a welcoming environment where everyone, regardless of their background, can experience the love of Christ and grow in their faith.
