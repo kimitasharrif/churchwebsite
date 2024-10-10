@@ -573,23 +573,40 @@ html, body {
   border-radius: 10px;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
+  overflow: hidden; /* Prevents hover overflow */
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px); /* Slight upward movement */
+}
+
+.card-image-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
 }
 
 .card-img {
   width: 100%;
-  height: 200px;
+  height: 80%;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img {
+  transform: translateY(10px); /* Shrinks from the bottom on hover */
 }
 
 .card-body {
   padding: 20px;
   text-align: center;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .card-body {
+  background-color: #007bff; /* Changes to blue on hover */
+  color: white;
 }
 
 .card-title {
@@ -598,9 +615,17 @@ html, body {
   color: #333;
 }
 
+.card:hover .card-title {
+  color: white; /* Changes title color on hover */
+}
+
 .card-text {
   font-size: 1em;
   color: #777;
+}
+
+.card:hover .card-text {
+  color: white; /* Changes text color on hover */
 }
 
 /* Responsive Design */
@@ -609,6 +634,5 @@ html, body {
     width: 100%;
   }
 }
-
 
 

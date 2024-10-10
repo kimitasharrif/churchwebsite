@@ -36,21 +36,27 @@ function Sermons() {
           {/* Event Cards Section */}
           <div className="row event-cards">
             <div className="col-md-3 card">
-              <img src={eventImage1} alt="Event 1" className="card-img" />
+              <div className="card-image-container">
+                <img src={eventImage1} alt="Event 1" className="card-img" />
+              </div>
               <div className="card-body">
                 <h5 className="card-title">Event 1</h5>
                 <p className="card-text">Join us for an inspiring evening of worship and fellowship.</p>
               </div>
             </div>
             <div className="col-md-3 card">
-              <img src={eventImage2} alt="Event 2" className="card-img" />
+              <div className="card-image-container">
+                <img src={eventImage2} alt="Event 2" className="card-img" />
+              </div>
               <div className="card-body">
                 <h5 className="card-title">Event 2</h5>
                 <p className="card-text">A special gathering for families to grow and connect in faith.</p>
               </div>
             </div>
             <div className="col-md-3 card">
-              <img src={eventImage3} alt="Event 3" className="card-img" />
+              <div className="card-image-container">
+                <img src={eventImage3} alt="Event 3" className="card-img" />
+              </div>
               <div className="card-body">
                 <h5 className="card-title">Event 3</h5>
                 <p className="card-text">Our youth group meets every Friday for an evening of fun and learning.</p>
