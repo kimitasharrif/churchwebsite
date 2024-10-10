@@ -4,7 +4,7 @@ import '../App.css'; // All CSS in App.css
 import logo from '../assets/logo/transparent_pefa_logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faBars } from '@fortawesome/free-solid-svg-icons';
-import { faYoutube, faTiktok, faInstagram, faWhatsapp, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube, faTiktok, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +12,10 @@ function Header() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false); // Close the menu after a link is clicked
   };
 
   return (
@@ -32,7 +36,7 @@ function Header() {
           <a href="https://www.youtube.com/@pkb_church" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} size="2x" />
           </a>
-            <a href="https://www.facebook.com/churchpkb/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/churchpkb/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </a>
           <a href="https://www.tiktok.com/@pkb_church" target="_blank" rel="noopener noreferrer">
@@ -41,10 +45,6 @@ function Header() {
           <a href="https://www.instagram.com/pkb_church/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
-          {/* <a href="https://wa.me/your-phonenumber" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-          </a> */}
-        
         </div>
       </div>
 
@@ -54,19 +54,20 @@ function Header() {
           <img src={logo} alt="Church Logo" className="logo" />
           <h1 className="church-name">ALL NATIONS-PEFA CHURCH KAYOLE B</h1>
         </div>
+    
 
         {/* Hamburger icon for small screens */}
         <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleMenu} />
 
         <nav>
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/about">ABOUT</Link></li>
-            <li><Link to="/ministries">MINISTRIES</Link></li>
-            <li><Link to="/events">EVENTS</Link></li>
-            <li><Link to="/sermons">SERMONS</Link></li>
-            <li><Link to="/contact">CONTACT</Link></li>
-            <li><Link to="/giving" className="giving-link">GIVING</Link></li>
+            <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
+            <li><Link to="/about" onClick={closeMenu}>ABOUT</Link></li>
+            <li><Link to="/ministries" onClick={closeMenu}>MINISTRIES</Link></li>
+            <li><Link to="/events" onClick={closeMenu}>EVENTS</Link></li>
+            <li><Link to="/sermons" onClick={closeMenu}>SERMONS</Link></li>
+            <li><Link to="/contact" onClick={closeMenu}>CONTACT</Link></li>
+            <li><Link to="/giving" className="giving-link" onClick={closeMenu}>GIVING</Link></li>
           </ul>
         </nav>
       </div>

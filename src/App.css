@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* General reset */
 * {
   margin: 0;
@@ -18,38 +16,38 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(39, 208, 250); /* Blue background */
+  background-color: rgb(39, 208, 250);
   color: white;
-  padding: 10px 20px; /* Keep this padding for internal spacing */
-  margin: 0; /* Ensure no margin around the header */
-  width: 100%; /* Make sure the header takes full width */
+  padding: 10px 20px;
+  margin: 0;
+  width: 100%;
 }
 
 /* Contact Info */
 .contact-info {
   display: flex;
-  align-items: center; /* Align items vertically center */
-  margin-left: 100px; /* Reduce space between contact info and social links */
+  align-items: center;
+  margin-left: 100px;
 }
 
 .contact-info p {
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .contact-info a {
-  margin-left: 5px; /* Add a small margin to links */
+  margin-left: 5px;
   color: white;
 }
 
 .social-media-links {
-  display: flex; /* Ensure links are displayed in a row */
+  display: flex;
   align-items: center;
-  margin-right: 100px; /* Align social media icons vertically */
+  margin-right: 100px;
 }
 
 .social-media-links a {
   color: white;
-  margin-left: 20px; /* Reduce space between social media links */
+  margin-left: 20px;
 }
 
 .social-media-links a:hover {
@@ -69,13 +67,13 @@ html, body {
 .logo-container {
   display: flex;
   margin-left: 100px;
-  align-items: center; /* Align logo and name vertically */
+  align-items: center;
 }
 
 .logo {
   width: 100px;
   height: 100px;
-  margin-right: 20px; /* Space between logo and church name */
+  margin-right: 20px;
 }
 
 .church-name {
@@ -84,8 +82,9 @@ html, body {
   color: rgb(39, 208, 250);
 }
 
+/* Hamburger icon */
 .menu-icon {
-  display: none; /* Hide by default */
+  display: none; /* Hide on larger screens */
   cursor: pointer;
   font-size: 1.5rem;
 }
@@ -120,23 +119,24 @@ html, body {
 /* Media query for small screens */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Hide navigation by default */
+    display: none; /* Hide navigation on small screens */
     flex-direction: column;
     align-items: center;
     background-color: white;
     position: absolute;
-    top: 60px; /* Adjust to align under the header */
+    top: 60px;
     width: 100%;
     left: 0;
+    z-index: 1000; /* Ensure the menu appears above content */
   }
 
   .nav-links.open {
-    display: flex; /* Show navigation when menu icon is clicked */
+    display: flex; /* Show when the menu is open */
   }
 
   .menu-icon {
-    display: block; /* Show hamburger menu on small screens */
-    margin-top: 10px;
+    display: block; /* Show the hamburger icon on small screens */
+    margin-right: 20px; /* Align on the right */
   }
 
   .header-social {
@@ -146,6 +146,11 @@ html, body {
 
   .social-media-links {
     margin-top: 10px;
+  }
+
+  .header-menu {
+    padding: 10px 20px;
+    border-bottom: none; /* Remove border for cleaner look on small screens */
   }
 }
 
@@ -634,5 +639,6 @@ html, body {
     width: 100%;
   }
 }
+
 
 
