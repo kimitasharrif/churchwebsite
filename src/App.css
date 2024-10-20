@@ -16,8 +16,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(39, 208, 250);
-  color: white;
+  color: black;
   padding: 10px 20px;
   margin: 0;
   width: 100%;
@@ -28,15 +27,17 @@ html, body {
   display: flex;
   align-items: center;
   margin-left: 100px;
+  
 }
 
 .contact-info p {
   margin: 0;
+  text-decoration: none;
 }
 
 .contact-info a {
   margin-left: 5px;
-  color: white;
+  color: black;
 }
 
 .social-media-links {
@@ -46,7 +47,7 @@ html, body {
 }
 
 .social-media-links a {
-  color: white;
+  color: black;
   margin-left: 20px;
 }
 
@@ -62,6 +63,7 @@ html, body {
   background-color: white;
   padding: 20px;
   border-bottom: 2px solid #ccc;
+  position: relative;
 }
 
 .logo-container {
@@ -150,7 +152,8 @@ html, body {
 
   .header-menu {
     padding: 10px 20px;
-    border-bottom: none; /* Remove border for cleaner look on small screens */
+    border-bottom: none; 
+    position: fixed;/* Remove border for cleaner look on small screens */
   }
 }
 
@@ -168,8 +171,7 @@ html, body {
   background-position: center;      /* Center the image */
   background-attachment: fixed;     /* Optional: makes the background stay fixed on scroll */                  
   padding: 150px 20px; 
-  margin-left: 100px;
- margin-right: 100px;
+  
 }
 .home-logo{
    width: 100%;
@@ -225,8 +227,6 @@ html, body {
 .about-content {
   position: relative; /* To keep the content separate from the overlay */
   z-index: 2; /* Ensure content is above the overlay */
-  margin-left:  200px;
-  margin-right:200px ; /* Add some padding */
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -289,8 +289,6 @@ html, body {
 .events-content {
  position: relative; /* To keep the content separate from the overlay */
   z-index: 2; /* Ensure content is above the overlay */
-  margin-left:  200px;
-  margin-right:200px ; /* Add some padding */
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -545,10 +543,10 @@ html, body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .form-container {
+/* @media (max-width: 768px) { */
+.form-container {
     padding: 15px;
-  }
+  } 
 
   .form-heading {
     font-size: 20px;
@@ -562,7 +560,7 @@ html, body {
   .overlay h1 {
     font-size: 36px;
   }
-}
+/* } */
 /* Event Cards Layout */
 .event-cards {
   display: flex;

@@ -9,7 +9,7 @@ import Sermons from './components/Sermons';
 import Giving from './components/Giving';
 import Contact from './components/Contact';
 import './App.css'; // All CSS in this file
-// import './components/styles.css'
+import './index.css'
 import Footer from './components/Footer';
 
 function App() {
