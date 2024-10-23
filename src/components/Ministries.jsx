@@ -7,22 +7,10 @@ function Ministries() {
   return (
      <>
       <div className="ministries-section">
-        {/* Background Image */}
-        <div className="ministrieslogo">
-          <img src={home} alt="welcome Ministries" className="ministries-logo" />
-        </div>
-        
-        {/* Overlay for Active Page Text */}
-        <div className="overlay">
-          <h1>Our Ministries</h1>
-          <p>
-            <Link to="/">Home</Link> // Our Ministries
-          </p>
-        </div>
-
+        <h2>Our Ministries</h2>
         {/* Main Content Section */}
         <div className="section ministries-content">
-      <h2>Our Ministries</h2>
+      
       <h3>Youth Ministry</h3>
       <p>We offer youth programs that help young people grow in their faith and have fun together.</p>
       <h3>Women's Ministry</h3>

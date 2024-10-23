@@ -1,29 +1,37 @@
 import React from 'react';
-import '../App.css'; // Unified styling
-import home from '../assets/bg/churchview.jpg';
+import '../Styles/Home.css';
+import home from '../assets/bg/Jesusbg.jpg';
+import eventImage1 from '../assets/bg/worshipexperience.jpg';
+import eventImage2 from '../assets/bg/dmglaunch.jpg';
+import eventImage3 from '../assets/bg/midweekservice.jpg';
+import { FaUsers } from 'react-icons/fa';
 
 function Home() {
   return (
     <>
+      {/* Hero Section */}
       <div className="homelogo">
         <img src={home} alt="welcome home" className="home-logo" />
       </div>
+
+      {/* Introduction Section */}
       <div className="section home-section">
         <h1>Welcome to ALL NATIONS-PEFA CHURCH KAYOLE B</h1>
         <p>We are so glad you're here. Learn more about us and join our community.</p>
-     
+        
         <h2>About Our Church</h2>
         <p>
-          Welcome to All Nations-PEFA Church Kayole B, a vibrant community dedicated to empowering individuals and families through faith, fellowship, and service. Nestled in the heart of Kayole, we are committed to nurturing spiritual growth and building strong, resilient families within our community. At All Nations-PEFA Church, we believe in creating a welcoming environment where everyone, regardless of their background, can experience the love of Christ and grow in their faith.
-          Our passionate pastors and dedicated leaders work tirelessly to provide engaging worship services, transformative teachings, and meaningful outreach programs that address the needs of our community. We strive to foster a spirit of love, compassion, and unity among our members, encouraging them to share their gifts and talents for the glory of God.
+          Welcome to All Nations-PEFA Church Kayole B, a vibrant community dedicated to empowering individuals and families through faith, fellowship, and service. 
+          Nestled in the heart of Kayole, we are committed to nurturing spiritual growth and building strong, resilient families within our community.
         </p>
         <p>
-          Whether you are seeking a place to connect with others, grow spiritually, or find support during life's challenges, All Nations-PEFA Church offers a variety of programs designed to meet your needs. From dynamic youth ministries and empowering women's groups to impactful community service initiatives and inspiring worship experiences, we are here to walk alongside you on your faith journey.
+          Whether you are seeking a place to connect with others, grow spiritually, or find support during life's challenges, All Nations-PEFA Church offers 
+          a variety of programs designed to meet your needs.
         </p>
-        <p>Join us as we worship, learn, and serve together, creating a brighter future for ourselves and our community through the power of God’s love.</p>
-        <p>Our church is a place of worship, fellowship, and outreach. We believe in bringing the love of Christ to our community and the world.</p>
+        
         <h3>Mission and Vision</h3>
         <p>Our mission is to spread the Gospel and to serve others with the love of Jesus Christ.</p>
+        
         <h3>Leadership Team</h3>
         <ul>
           <li>Senior Pastor: Peter Ndambuki</li>
@@ -31,6 +39,66 @@ function Home() {
           <li>Youth Pastor: Tom Brown</li>
         </ul>
       </div>
+
+      {/* Events Section */}
+      <div className="events-section">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>Community Service Day - Oct 15</li>
+          <li>Worship Night - Nov 1</li>
+          <li>Christmas Service - Dec 25</li>
+        </ul>
+
+        {/* Event Cards */}
+        <div className="row event-cards">
+          <div className="col-md-3 card">
+            <img src={eventImage1} alt="Worship Experience" className="card-img" />
+            <div className="card-body">
+              <h5 className="card-title">Worship Experience</h5>
+              <p className="card-text">Join us for an inspiring evening of worship and fellowship.</p>
+            </div>
+          </div>
+          <div className="col-md-3 card">
+            <img src={eventImage2} alt="Family Gathering" className="card-img" />
+            <div className="card-body">
+              <h5 className="card-title">Family Gathering</h5>
+              <p className="card-text">A special gathering for families to grow and connect in faith.</p>
+            </div>
+          </div>
+          <div className="col-md-3 card">
+            <img src={eventImage3} alt="Youth Group" className="card-img" />
+            <div className="card-body">
+              <h5 className="card-title">Youth Group</h5>
+              <p className="card-text">Our youth group meets every Friday for an evening of fun and learning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Sermons Section */}
+      <div className="sermons-section">
+        <h2>Sermons</h2>
+        <p>Watch our latest sermons or browse our sermon archive.</p>
+        <ul>
+          <li><a href="/sermon1">Sermon 1: God's Love</a></li>
+          <li><a href="/sermon2">Sermon 2: Faith in Hard Times</a></li>
+          <li><a href="/sermon3">Sermon 3: Living with Purpose</a></li>
+        </ul>
+      </div>
+     <div className="membership-section">
+          {/* Become a Member Card */}
+          <div className="card become-member-card">
+            <div className="card-body">
+              <h5 className="card-title">Become a Member</h5>
+              <p className="card-text">
+                Join our community and be a part of something greater. Experience spiritual growth, fellowship, and opportunities to serve.
+              </p>
+              <button className="btn btn-primary join-btn">
+                <FaUsers className="icon" /> Join Us
+              </button>
+            </div>
+          </div>
+        </div>
     </>
   );
 }

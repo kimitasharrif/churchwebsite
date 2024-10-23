@@ -1,0 +1,92 @@
+/* Footer styles */
+.footer {
+ 
+  background-color:rgb(39, 208, 250);
+  color: black;
+  padding: 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-section p{font-size: 18px;
+
+}
+.footer-section ul {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+  color: greenyellow;
+}
+
+.footer-bottom {
+  background-color: rgb(39, 208, 250);
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack navigation links vertically on small screens */
+    align-items: center;
+  }
+
+  .social-media-links {
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap social media links */
+  }
+}
+
+/* Contact form styles */
+.love-link {
+  color: red; /* Red color for the love icon */
+  text-decoration: none; /* No underline */
+  font-size: 14pxpx; /* Size of the heart icon */
+}
+
+.love-link:hover {
+  color: red; /* Darker red on hover */
+}

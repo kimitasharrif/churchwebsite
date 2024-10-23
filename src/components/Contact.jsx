@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import home from '../assets/bg/mountain.jpg';
-import '../App.css';  // Import your updated styles
+// import '../App.css';  
 
 function Contact() {
   const [formData, setFormData] = useState({

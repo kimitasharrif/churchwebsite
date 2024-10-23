@@ -1,0 +1,139 @@
+/* Giving Form Styles */
+.giving-form {
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.giving-form h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.giving-form p {
+  color: #777;
+  font-size: 16px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #009688;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #009688;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #00796b;
+}
+
+button:active {
+  background-color: #00695c;
+}
+
+button[type="submit"] {
+  background-color: #00796b;
+}
+
+button[type="submit"]:hover {
+  background-color: #00695c;
+}
+
+button[type="submit"]:active {
+  background-color: #004d40;
+}
+
+.giving-form .review-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.review-section p {
+  color: #333;
+  font-weight: 500;
+}
+
+button.edit,
+button.submit {
+  margin-top: 20px;
+  background-color: #4caf50;
+}
+
+button.edit {
+  background-color: #f44336;
+}
+
+button.edit:hover {
+  background-color: #d32f2f;
+}
+
+button.submit:hover {
+  background-color: #388e3c;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .giving-form {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+}

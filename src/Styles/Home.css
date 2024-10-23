@@ -1,0 +1,140 @@
+/* Home.css */
+
+/* General styling */
+.homelogo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-logo {
+  width: 100%;
+  max-width: 1536px; /* Limits the size for larger screens */
+  height: auto;
+}
+
+.section {
+  padding: 20px;
+  max-width: 1536px; /* Sets maximum width of the content */
+  margin: 0 auto; /* Centers the section */
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Font sizes and layout for larger screens */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homelogo {
+    margin-top: 10px;
+  }
+
+  .home-logo {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .home-logo {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+}
+.membership-section {
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  margin-top: 30px;
+}
+
+.become-member-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 75%; /* This ensures the card takes up 3/4 of the screen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual appeal */
+}
+
+.join-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: blue;
+}
+
+.join-btn .icon {
+  font-size: 20px;
+}
