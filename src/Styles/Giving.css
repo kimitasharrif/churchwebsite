@@ -1,139 +1,156 @@
-/* Giving Form Styles */
-.giving-form {
-  background-color: #f9f9f9;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6; /* Light background for the whole page */
+}
+
+/* Giving Section */
+.giving-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* Welcome Hero */
+.welcome-hero {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contactlogo img {
+  width: 100%;
+  height: auto;
+  filter: brightness(70%); /* Darken the image for better text visibility */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styles */
+.giving-form {
+  background-color: #ffffff; /* White background for the form */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .giving-form h2 {
-  font-size: 28px;
-  font-weight: bold;
   color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.giving-form p {
-  color: #777;
-  font-size: 16px;
-  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #3498db; /* Border below the heading */
+  padding-bottom: 0.5rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem; /* Increased spacing for better layout */
 }
 
 .form-group label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select {
-  padding: 10px;
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 16px;
-  color: #333;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  transition: border-color 0.3s; /* Transition effect on focus */
 }
 
 .form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  border-color: #009688;
-  outline: none;
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #3498db; /* Highlight on focus */
+  outline: none; /* Remove default outline */
 }
 
 .form-group textarea {
-  resize: vertical;
-  min-height: 100px;
+  height: 100px; /* Fixed height for textarea */
 }
 
+button[type="submit"],
 button {
-  background-color: #009688;
-  color: white;
-  padding: 12px 20px;
+  background-color: #3498db; /* Button color */
+  color: white; /* Text color */
+  padding: 0.75rem 1.5rem; /* Button padding */
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  width: 100%;
-  margin-top: 10px;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 1rem; /* Spacing above the button */
+  transition: background-color 0.3s ease, transform 0.2s; /* Button hover effects */
 }
 
+button[type="submit"]:hover,
 button:hover {
-  background-color: #00796b;
+  background-color: #2980b9; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
-button:active {
-  background-color: #00695c;
+/* Required Field Styles */
+.form-group label::after {
+  content: '*'; /* Mandatory field indicator */
+  color: red; /* Red color for visibility */
+  margin-left: 5px;
 }
 
-button[type="submit"] {
-  background-color: #00796b;
+/* Review Section */
+.giving-form p {
+  margin-bottom: 0.5rem; /* Spacing below paragraphs */
+  font-size: 1rem;
+  color: #555; /* Slightly lighter text for review section */
 }
 
-button[type="submit"]:hover {
-  background-color: #00695c;
-}
-
-button[type="submit"]:active {
-  background-color: #004d40;
-}
-
-.giving-form .review-section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.review-section p {
-  color: #333;
-  font-weight: 500;
-}
-
-button.edit,
-button.submit {
-  margin-top: 20px;
-  background-color: #4caf50;
-}
-
-button.edit {
-  background-color: #f44336;
-}
-
-button.edit:hover {
-  background-color: #d32f2f;
-}
-
-button.submit:hover {
-  background-color: #388e3c;
-}
-
-/* Mobile Responsive */
+/* Media Queries */
 @media (max-width: 768px) {
-  .giving-form {
-    padding: 20px;
-  }
-
   .form-group {
-    margin-bottom: 15px;
+    flex-direction: column; /* Stack form elements on smaller screens */
   }
 
-  button {
-    padding: 10px 15px;
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; /* Full width for input fields */
   }
 }
+
+.button-space {
+  margin-right: 1rem; /* Space between buttons */
+}
+
+.button-space:last-child {
+  margin-right: 0; /* No margin on the last button */
+}
+

@@ -1,53 +1,44 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faTiktok, faInstagram, faWhatsapp, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import '../Styles/Footer.css'
+import '../Styles/Footer.css';
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
+        {/* About Section */}
         <div className="footer-section about">
           <h2>ALL NATIONS-PEFA CHURCH KAYOLE B</h2>
-          <br />
           <h5>P.O BOX 5790-00200 Nairobi.</h5>
           <h5>VISION:</h5>
           <p>Making Disciples of all nations (Matthew 28:19)</p>
-          <br />
           <h5>MISSION STATEMENT:</h5>
-          <br />
-          <p>
+          <p className='min'>
             To be a church that effectively and rightly declares the message of 
             the scripture that is socially and spiritually relevant, equipping
             saints to do the work of the ministry.
           </p>
         </div>
 
+        {/* Quick Links Section */}
         <div className="footer-section links">
           <h2>Quick Links</h2>
-          <br />
           <ul>
             <li><a href="/">Home</a></li>
-            <br />
             <li><a href="#services">Services</a></li>
-            <br />
             <li><a href="/about">About Us</a></li>
-            <br />
             <li><a href="contact">Contact</a></li>
           </ul>
         </div>
 
+        {/* Contact Form Section */}
         <div className="footer-section contact-form">
           <h2>Contact Us</h2>
-          <br />
           <p><strong>Email:</strong> pefakayoleb@gmail.com</p>
-          <br />
           <p><strong>Phone:</strong> +123 456 7890</p>
-          <br />
           <p>PEFA/Raster Stage Kayole, Nairobi, Kenya</p>
-          <br />
-          <h5>follow us in social media:</h5>
-          <br /><br />
-
+          <h5>Follow us on social media:</h5>
           <div className="social-media-links" style={styles.iconContainer}>
             <a href="https://www.youtube.com/@pkb_church" target="_blank" rel="noopener noreferrer" style={styles.youtube}>
               <FontAwesomeIcon icon={faYoutube} size="2x" />
@@ -69,12 +60,10 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-  <p>
-    &copy; {new Date().getFullYear()}  All Rights Reserved              Made with  <div className='love-link'>❤</div> 
-     by <a href="/"> sherrif.com </a> 
-  </p>
-</div>
-
+        <p>
+          &copy; {new Date().getFullYear()} All Rights Reserved | Made with <span className="love-link">❤</span> by <a href="/">sherrif.com</a>
+        </p>
+      </div>
     </footer>
   );
 }
@@ -82,9 +71,9 @@ function Footer() {
 const styles = {
   iconContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
-    maxWidth: '300px', // Adjust the width as needed
-    margin: '0 auto', // Center horizontally
+    justifyContent: 'space-around',
+    maxWidth: '300px',
+    margin: '0 auto',
   },
   youtube: {
     color: '#FF0000',

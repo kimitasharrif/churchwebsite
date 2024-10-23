@@ -10,95 +10,103 @@ function Home() {
   return (
     <>
       {/* Hero Section */}
-      <div className="homelogo">
-        <img src={home} alt="welcome home" className="home-logo" />
+      <div className="hero-section">
+        <img src={home} alt="welcome home" className="hero-image" />
+        <div className="hero-overlay">
+          <h1 className="hero-title">Welcome to ALL NATIONS-PEFA CHURCH KAYOLE B</h1>
+          <p className="hero-subtitle">Join us and be a part of a thriving community of faith</p>
+        </div>
       </div>
 
-      {/* Introduction Section */}
-      <div className="section home-section">
-        <h1>Welcome to ALL NATIONS-PEFA CHURCH KAYOLE B</h1>
-        <p>We are so glad you're here. Learn more about us and join our community.</p>
-        
-        <h2>About Our Church</h2>
-        <p>
-          Welcome to All Nations-PEFA Church Kayole B, a vibrant community dedicated to empowering individuals and families through faith, fellowship, and service. 
-          Nestled in the heart of Kayole, we are committed to nurturing spiritual growth and building strong, resilient families within our community.
-        </p>
-        <p>
-          Whether you are seeking a place to connect with others, grow spiritually, or find support during life's challenges, All Nations-PEFA Church offers 
-          a variety of programs designed to meet your needs.
-        </p>
-        
-        <h3>Mission and Vision</h3>
-        <p>Our mission is to spread the Gospel and to serve others with the love of Jesus Christ.</p>
-        
-        <h3>Leadership Team</h3>
-        <ul>
-          <li>Senior Pastor: Peter Ndambuki</li>
-          <li>Associate Pastor: William Wasonga</li>
-          <li>Youth Pastor: Tom Brown</li>
-        </ul>
+      {/* Our Services Section */}
+      <div className="services-section">
+        <h2 className="section-title">Our Services</h2>
+        <div className="services-grid">
+          <div className="service-card">
+            <h3>Morning Prayers</h3>
+            <p>7:30 - 8:00 AM</p>
+          </div>
+          <div className="service-card">
+            <h3>First Service</h3>
+            <p>8:30 - 10:00 AM</p>
+          </div>
+          <div className="service-card">
+            <h3>Second Service</h3>
+            <p>10:30 - 1:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Latest Sunday Services Section */}
+      <div className="sunday-services-section">
+        <h2 className="section-title">Latest Sunday Services</h2>
+        <div className="video-grid">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID1"
+            title="Sunday Service 1"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID2"
+            title="Sunday Service 2"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
 
       {/* Events Section */}
       <div className="events-section">
-        <h2>Upcoming Events</h2>
-        <ul>
+        <h2 className="section-title">Upcoming Events</h2>
+        <ul className="events-list">
           <li>Community Service Day - Oct 15</li>
           <li>Worship Night - Nov 1</li>
           <li>Christmas Service - Dec 25</li>
         </ul>
 
         {/* Event Cards */}
-        <div className="row event-cards">
-          <div className="col-md-3 card">
-            <img src={eventImage1} alt="Worship Experience" className="card-img" />
-            <div className="card-body">
-              <h5 className="card-title">Worship Experience</h5>
-              <p className="card-text">Join us for an inspiring evening of worship and fellowship.</p>
+        <div className="event-cards">
+          <div className="event-card">
+            <img src={eventImage1} alt="Worship Experience" className="event-image" />
+            <div className="event-details">
+              <h3>Worship Experience</h3>
+              <p>Join us for an inspiring evening of worship and fellowship.</p>
             </div>
           </div>
-          <div className="col-md-3 card">
-            <img src={eventImage2} alt="Family Gathering" className="card-img" />
-            <div className="card-body">
-              <h5 className="card-title">Family Gathering</h5>
-              <p className="card-text">A special gathering for families to grow and connect in faith.</p>
+          <div className="event-card">
+            <img src={eventImage2} alt="Family Gathering" className="event-image" />
+            <div className="event-details">
+              <h3>Family Gathering</h3>
+              <p>A special gathering for families to grow and connect in faith.</p>
             </div>
           </div>
-          <div className="col-md-3 card">
-            <img src={eventImage3} alt="Youth Group" className="card-img" />
-            <div className="card-body">
-              <h5 className="card-title">Youth Group</h5>
-              <p className="card-text">Our youth group meets every Friday for an evening of fun and learning.</p>
+          <div className="event-card">
+            <img src={eventImage3} alt="Youth Group" className="event-image" />
+            <div className="event-details">
+              <h3>Youth Group</h3>
+              <p>Our youth group meets every Friday for an evening of fun and learning.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Sermons Section */}
-      <div className="sermons-section">
-        <h2>Sermons</h2>
-        <p>Watch our latest sermons or browse our sermon archive.</p>
-        <ul>
-          <li><a href="/sermon1">Sermon 1: God's Love</a></li>
-          <li><a href="/sermon2">Sermon 2: Faith in Hard Times</a></li>
-          <li><a href="/sermon3">Sermon 3: Living with Purpose</a></li>
-        </ul>
-      </div>
-     <div className="membership-section">
-          {/* Become a Member Card */}
-          <div className="card become-member-card">
-            <div className="card-body">
-              <h5 className="card-title">Become a Member</h5>
-              <p className="card-text">
-                Join our community and be a part of something greater. Experience spiritual growth, fellowship, and opportunities to serve.
-              </p>
-              <button className="btn btn-primary join-btn">
-                <FaUsers className="icon" /> Join Us
-              </button>
-            </div>
-          </div>
+      {/* Membership Section */}
+      <div className="membership-section">
+        <div className="membership-card">
+          <FaUsers className="membership-icon" />
+          <h3>Become a Member</h3>
+          <p>Join our community and experience spiritual growth, fellowship, and opportunities to serve.</p>
+          <button className="join-btn">Join Us</button>
         </div>
+      </div>
     </>
   );
 }

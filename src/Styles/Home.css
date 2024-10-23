@@ -1,140 +1,203 @@
-/* Home.css */
-
-/* General styling */
-.homelogo {
-  text-align: center;
-  margin-top: 20px;
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
 }
 
-.home-logo {
+.hero-image {
   width: 100%;
-  max-width: 1536px; /* Limits the size for larger screens */
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
 }
 
-.section {
-  padding: 20px;
-  max-width: 1536px; /* Sets maximum width of the content */
-  margin: 0 auto; /* Centers the section */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: #fff;
+  padding: 0 20px; /* Add padding to avoid content being too close to the edge on small screens */
 }
 
-h1, h2, h3 {
-  color: #333;
-}
-
-/* Font sizes and layout for larger screens */
-h1 {
+.hero-title {
   font-size: 3rem;
+  font-weight: bold;
 }
 
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
+.hero-subtitle {
   font-size: 1.5rem;
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Responsive media queries */
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  p {
-    font-size: 1.1rem;
-  }
-}
-
 @media (max-width: 768px) {
-  .homelogo {
-    margin-top: 10px;
+  .hero-section {
+    height: 300px;
   }
 
-  .home-logo {
-    width: 100%;
-    max-width: 600px;
-  }
-
-  h1 {
+  .hero-title {
     font-size: 2rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  p {
+  .hero-subtitle {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
+  .hero-section {
+    height: 200px;
+  }
+
+  .hero-title {
     font-size: 1.5rem;
   }
 
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-  }
-
-  p {
+  .hero-subtitle {
     font-size: 0.9rem;
   }
-
-  .section {
-    padding: 10px;
-  }
-
-  .home-logo {
-    max-width: 100%; /* Full width for smaller screens */
-  }
 }
-.membership-section {
+
+/* Services Section */
+.services-section {
+  padding: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.services-grid {
   display: flex;
-  justify-content: center; /* Center the card horizontally */
-  margin-top: 30px;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow services to wrap on smaller screens */
 }
 
-.become-member-card {
+.service-card {
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 10px;
-  width: 75%; /* This ensures the card takes up 3/4 of the screen */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual appeal */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 10px; /* Add margin to avoid items being too close on small screens */
+}
+
+.service-card h3 {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%; /* Make the service card take most of the width on smaller screens */
+  }
+}
+
+/* Sunday Services Section */
+.sunday-services-section {
+  padding: 3rem;
+  text-align: center;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .video-grid iframe {
+    width: 100%;
+    height: auto; /* Ensure videos adjust on smaller screens */
+  }
+}
+
+/* Events Section */
+.events-section {
+  padding: 3rem;
+  text-align: center;
+}
+
+.event-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0; /* Add margin to improve spacing */
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .event-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    width: 90%;
+  }
+}
+
+/* Membership Section */
+.membership-section {
+  padding: 3rem;
+  text-align: center;
+}
+
+.membership-card {
+  background-color: #eaf4fc;
+  padding: 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.membership-icon {
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 1rem;
 }
 
 .join-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  padding: 10px 20px;
-  color: blue;
+  background-color: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.join-btn .icon {
-  font-size: 20px;
+.join-btn:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .membership-card {
+    width: 90%;
+  }
 }
