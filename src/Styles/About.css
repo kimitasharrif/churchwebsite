@@ -1,127 +1,102 @@
-/* About Section */
-.about-section {
-  position: relative;
-  height: auto; /* Allow height to adjust for smaller screens */
-  overflow: hidden;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Welcome Image and Overlay */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6; /* Light background for the whole page */
+}
+
+/* About Section */
+.about-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* Welcome Hero */
 .about-welcome {
   position: relative;
-  height: 50vh; /* 50% of viewport height */
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .about-logo {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the area without distortion */
-  filter: brightness(70%); /* Darken the image for better overlay visibility */
+  height: auto;
+  filter: brightness(70%); /* Darken the image for better text visibility */
 }
 
-/* Overlay Styles */
 .hero-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
-  padding: 0 20px; /* Add padding for better spacing */
-  z-index: 2; /* Ensure overlay is above the image */
+  color: white;
 }
 
 .hero-title {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Main Content Styles */
 .about-content {
-  padding: 3rem;
-  background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  max-width: 800px; /* Max width for readability */
-  margin: 2rem auto; /* Center the content */
-  position: relative; /* To stack properly */
-  z-index: 1; /* Below the overlay */
-}
-
-/* Cards Section Styles */
-.about-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-  padding: 2rem;
-  max-width: 1200px; /* Allow more space on large screens */
-  margin: 0 auto; /* Center the cards */
-}
-
-.card {
-  background-color: #ffffff; /* White background for cards */
+  background-color: #ffffff; /* White background for the content */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: calc(30% - 1.5rem); /* Adjust width for larger screens */
-  transition: transform 0.2s; /* Add hover effect */
 }
 
-.card:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
+.about-content h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-/* Card Headings */
+/* Cards Section */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Space between cards */
+  margin-top: 2rem; /* Spacing above the cards */
+}
+
+.card {
+  background-color: #ffffff; /* Card background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px; /* Flex-grow and shrink, with a minimum width */
+}
+
 .card h3 {
-  color: #3498db; /* Change heading color */
+  color: #3498db; /* Title color */
   margin-bottom: 1rem;
 }
 
-/* Media Queries */
-@media (max-width: 992px) {
-  .about-content {
-    margin: 1rem; /* Adjust margin for smaller screens */
-    padding: 1.5rem;
-  }
-
-  .about-cards {
-    flex-direction: column; /* Stack cards on smaller screens */
-    align-items: center;
-  }
-
-  .card {
-    width: 90%; /* Make the card take most of the width on smaller screens */
-    margin-bottom: 1rem; /* Space between stacked cards */
-  }
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .about-welcome {
-    height: 40vh; /* Smaller height for mobile */
-  }
-
   .hero-title {
-    font-size: 2.5rem; /* Smaller title size */
+    font-size: 2.5rem; /* Smaller title on mobile */
   }
 
   .hero-subtitle {
-    font-size: 1rem; /* Smaller subtitle size */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.8rem; /* Further reduce title size */
+    font-size: 1rem; /* Smaller subtitle on mobile */
   }
 
-  .hero-subtitle {
-    font-size: 0.9rem; /* Further reduce subtitle size */
+  .about-content h1 {
+    font-size: 1.5rem; /* Smaller main heading on mobile */
   }
 }
