@@ -7,9 +7,9 @@ import Ministries from './components/Ministries';
 import Giving from './components/Giving';
 import Contact from './components/Contact';
 // import './App.css'; 
-// import './index.css'
+import './index.css'
 import './Styles/utils.css'
-// import './Styles/modern-normalize.css'
+import './Styles/modern-normalize.css'
 import Footer from './components/Footer';
 import HomeCarousel from './components/HomeCarousel';
 

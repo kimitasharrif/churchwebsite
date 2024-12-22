@@ -14,33 +14,33 @@ const HomeCarousel = () => {
   const carouselItems = [
     {
       image: praisea,
-      title: '',
-      description: 'Welcome to All-Nation PEFA Church Kayole B.',
-      link: '/g-gym',
+      title: 'Welcome to All-Nation PEFA Church Kayole B',
+      description: 'Become one of us.',
+      link: '#',
     },
     {
       image: praiseb,
       title: 'Join us as we praise the Lord',
       description: 'Join us and be a part of a thriving community of faith.',
-      link: '/y-yoga',
+      link: '#',
     },
     {
       image: praisec,
-      title: '',
-      description: 'Unwind in our sauna, perfect for post-workout relaxation.',
-      link: '/s-sauna',
+      title: 'About US',
+      description: 'Learn more about us.',
+      link: '/about',
     },
     {
       image: praisequire,
       title: 'Come Experience with our devoted church quire',
-      description: 'Take a refreshing dip in our pristine swimming pool.',
-      link: '/s-pool',
+      description: 'Come worship with us.',
+      link: '/#',
     },
     {
       image: prayerSessionImage,
       title: 'Come lets pray together',
-      description: 'Immerse yourself in tranquility with our luxurious steam bath.',
-      link: '/s-bath',
+      description: 'Join us as we today.',
+      link: '#',
     },
   ];
 

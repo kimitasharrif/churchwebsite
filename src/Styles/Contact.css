@@ -26,9 +26,7 @@ body {
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -42,11 +40,11 @@ body {
 .overlay h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .overlay p {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   font-size: 1rem;
 }
 

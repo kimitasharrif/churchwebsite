@@ -1,5 +1,5 @@
 /* General Reset */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,9 +8,58 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-}
+} */
 
 /* Scroll-to-Top Button */
+
+/* Responsive Design for Event Cards */
+@media (max-width: 768px) {
+  .event-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Reduce spacing between cards for smaller screens */
+  }
+
+  .event-card {
+    max-width: 90%; /* Adjust width to fit smaller screens while maintaining padding */
+    text-align: left; /* Align text for better readability */
+    padding: 15px; /* Reduce padding to save space */
+  }
+
+  .event-image {
+    height: auto; /* Ensure images are responsive */
+    max-height: 200px; /* Optional: Limit height for consistent card sizes */
+  }
+
+  .event-details h3 {
+    font-size: 1rem; /* Scale down the heading font size */
+  }
+
+  .event-details p {
+    font-size: 0.9rem; /* Scale down the paragraph font size */
+  }
+}
+
+/* Optional: Extra small screens (below 480px) */
+@media (max-width: 480px) {
+  .event-card {
+    padding: 10px; /* Further reduce padding */
+    font-size: 0.8rem; /* Scale down font size */
+  }
+
+  .event-image {
+    max-height: 150px; /* Adjust image height for very small screens */
+  }
+
+  .event-details h3 {
+    font-size: 0.9rem; /* Adjust heading size */
+  }
+
+  .event-details p {
+    font-size: 0.8rem; /* Adjust paragraph size */
+  }
+}
+
 .scroll-top-btn {
   position: fixed;
   bottom: 20px;
