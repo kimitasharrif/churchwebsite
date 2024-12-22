@@ -1,22 +1,79 @@
-import React from 'react';
 import '../Styles/Home.css';
-import home from '../assets/bg/Jesusbg.jpg';
-import eventImage1 from '../assets/bg/worshipexperience.jpg';
-import eventImage2 from '../assets/bg/dmglaunch.jpg';
-import eventImage3 from '../assets/bg/midweekservice.jpg';
-import { FaUsers } from 'react-icons/fa';
+import home from '../assets/images/Jesusbg.jpg';
+import eventImage1 from '../assets/images/worshipexperience.jpg';
+import eventImage2 from '../assets/images/dmglaunch.jpg';
+import eventImage3 from '../assets/images/midweekservice.jpg';
+import HomeCarousel from './HomeCarousel';
+import React, { useEffect, useState } from 'react';
+import { FaUsers,FaWhatsapp,  FaLevelUpAlt} from 'react-icons/fa';
+
+
 
 function Home() {
+    const [showScrollTopButton, setShowScrollTopButton] = useState(false);
+  const [buttonText, setButtonText] = useState('How may I help you?');
+ // WhatsApp Business Number
+  const whatsappNumber = '+1234567890'; // Replace with your company's WhatsApp number
+// 1234567890
+  // Text options for the floating button
+  const buttonTexts = [
+    'How may I help you?',
+    'Need assistance?',
+    'Hello! How can I assist?',
+    'Looking for help?',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setButtonText((prevText) => {
+        const currentIndex = buttonTexts.indexOf(prevText);
+        const nextIndex = (currentIndex + 1) % buttonTexts.length;
+        return buttonTexts[nextIndex];
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [buttonTexts]);
+
+  const handleButtonClick = () => {
+    const message = encodeURIComponent('Hi! I need assistance.');
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappLink, '_blank'); // Opens the WhatsApp chat in a new tab
+  };
+   // Scroll to Top Functionality
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Show/hide scroll button on scroll
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setShowScrollTopButton(true);
+    } else {
+      setShowScrollTopButton(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <>
-      {/* Hero Section */}
-      <div className="hero-section">
-        <img src={home} alt="welcome home" className="hero-image" />
-        <div className="hero-overlay">
-          <h1 className="hero-title">Welcome to ALL NATIONS-PEFA CHURCH KAYOLE B</h1>
-          <p className="hero-subtitle">Join us and be a part of a thriving community of faith</p>
-        </div>
+          {/* Scroll to Top Button */}
+      {showScrollTopButton && (
+        <button className="scroll-top-btn" onClick={handleScrollTop}>
+          <FaLevelUpAlt />
+        </button>
+      )}
+      {/* Floating WhatsApp Button */}
+      <div id="floating-button" onClick={handleButtonClick}>
+        <span id="button-icon">
+          <FaWhatsapp />
+        </span>
+        <span id="button-text">{buttonText}</span>
       </div>
+
+      <HomeCarousel/>
 
       {/* Our Services Section */}
       <div className="services-section">
@@ -40,11 +97,12 @@ function Home() {
       {/* Latest Sunday Services Section */}
       <div className="sunday-services-section">
         <h2 className="section-title">Latest Sunday Services</h2>
+
         <div className="video-grid">
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID1"
+            src="https://www.youtube.com/embed/akFrR4Dbw_w?si=EctZysd-u8M9CbMT"
             title="Sunday Service 1"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -54,7 +112,7 @@ function Home() {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID2"
+            src="https://www.youtube.com/embed/hLNNeyBoJWc?si=hNzG_6xCXuZv4PiH"
             title="Sunday Service 2"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

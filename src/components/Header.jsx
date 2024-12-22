@@ -3,8 +3,7 @@ import { Link} from 'react-router-dom';
 import '../Styles/Header.css'; 
 import logo from '../assets/logo/transparent_pefa_logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faBars } from '@fortawesome/free-solid-svg-icons';
-import { faYoutube, faTiktok, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,8 +39,7 @@ function Header() {
         </div>
     
 
-        {/* Hamburger icon for small screens */}
-        <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleMenu} />
+  
 
         <nav>
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
@@ -51,6 +49,11 @@ function Header() {
             <li><Link to="/giving" className="giving-link" onClick={closeMenu}>GIVE</Link></li>
           </ul>
         </nav>
+        <FontAwesomeIcon
+          icon={menuOpen ? faTimes : faBars} // Toggle between faBars and faTimes
+          className="menu-icon"
+          onClick={toggleMenu}
+        />
       </div>
     </header>
   );

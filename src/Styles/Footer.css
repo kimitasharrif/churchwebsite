@@ -1,43 +1,42 @@
-/* Footer Styles */
-
+/* General Footer Styles */
 .footer {
-  background-color: #1e1e1e; /* Dark background for contrast */
-  color: #fff; /* White text for visibility */
-  padding: 40px 0;
-  font-family: 'Roboto', sans-serif;
+  background-color: #222;
+  color: #f5f5f5;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Ensures responsiveness */
-  gap: 20px; /* Adds space between sections */
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 250px; /* Ensures sections stack neatly */
-  margin-bottom: 20px;
+/* About Section */
+.footer-section.about h2 {
+  color: #ff9800;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
-.footer-section h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #f9a826; /* Accent color */
+.footer-section.about h5 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #ddd;
 }
 
-.footer-section h5, .footer-section p {
-  font-size: 16px;
-  margin-bottom: 15px;
+.footer-section.about p {
+  font-size: 0.9rem;
   line-height: 1.6;
-  color: #bdbdbd;
+  color: #ccc;
 }
 
-.footer-section p strong {
-  color: #fff; /* Bold contrast for important text */
+/* Quick Links Section */
+.footer-section.links h2 {
+  color: #ff9800;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .footer-section.links ul {
@@ -46,69 +45,83 @@
 }
 
 .footer-section.links ul li {
-  margin-bottom: 10px;
+  margin: 5px 0;
 }
 
 .footer-section.links ul li a {
-  color: #bdbdbd;
+  color: #ddd;
   text-decoration: none;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .footer-section.links ul li a:hover {
-  color: #f9a826;
+  color: #ff9800;
 }
 
+/* Contact Form Section */
+.footer-section.contact-form h2 {
+  color: #ff9800;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-section.contact-form p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section.contact-form h5 {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Social Media Links */
 .social-media-links a {
-  margin-right: 10px;
-  color: inherit; /* Icon colors controlled by inline styles */
+  margin: 0 10px;
   transition: transform 0.3s ease;
 }
 
 .social-media-links a:hover {
-  transform: scale(1.2); /* Enlarge icons on hover */
+  transform: scale(1.2);
 }
 
+/* Footer Bottom Section */
 .footer-bottom {
   text-align: center;
-  padding: 20px;
-  background-color: #171717;
-  font-size: 14px;
-  color: #bdbdbd;
-  border-top: 1px solid #333; /* Subtle top border */
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
 .footer-bottom a {
-  color: #f9a826; /* Highlighted links */
+  color: #ff9800;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.footer-bottom .love-link {
-  display: inline-block;
-  color: red;
-  font-size: 16px;
-  margin: 0 4px;
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
 
-.footer-bottom .love-link:hover {
-  transform: scale(1.2);
+.love-link {
+  color: #ff4d4d;
+  font-size: 1.2rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .social-media-links {
-    justify-content: center;
-  }
-
-  .footer-section {
-    margin-bottom: 40px;
-  }
-  .min{
-    margin: auto;
+    margin-top: 15px;
   }
 }

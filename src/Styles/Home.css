@@ -1,191 +1,220 @@
-/* Hero Section */
-.hero-section {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(70%);
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  padding: 0 20px; /* Add padding to avoid content being too close to the edge on small screens */
+/* Scroll-to-Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-.hero-title {
-  font-size: 3rem;
+.scroll-top-btn:hover {
+  background-color: #ffb74d;
+}
+
+/* Floating WhatsApp Button */
+#floating-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+#floating-button:hover {
+  transform: scale(1.05);
+}
+
+#button-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+#button-text {
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
-.hero-subtitle {
-  font-size: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    height: 300px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    height: 200px;
-  }
-
-  .hero-title {
-    font-size: 1.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.9rem;
-  }
+/* Home Carousel */
+.carousel-container {
+  margin: 20px 0;
 }
 
 /* Services Section */
 .services-section {
-  padding: 3rem;
   text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #333;
+  font-size: 2rem;
+  color: #ff9800;
+  margin-bottom: 20px;
 }
 
 .services-grid {
   display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-  flex-wrap: wrap; /* Allow services to wrap on smaller screens */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .service-card {
-  background-color: #f9f9f9;
-  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  margin: 10px; /* Add margin to avoid items being too close on small screens */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
 }
 
 .service-card h3 {
+  font-size: 1.2rem;
   color: #333;
 }
 
-@media (max-width: 768px) {
-  .services-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-card {
-    width: 90%; /* Make the service card take most of the width on smaller screens */
-  }
+.service-card p {
+  color: #666;
 }
 
 /* Sunday Services Section */
 .sunday-services-section {
-  padding: 3rem;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .video-grid {
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-  .video-grid iframe {
-    width: 100%;
-    height: auto; /* Ensure videos adjust on smaller screens */
-  }
+iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Events Section */
 .events-section {
-  padding: 3rem;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
   text-align: center;
+}
+
+.events-list {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .event-cards {
   display: flex;
-  justify-content: space-around;
-  gap: 1rem;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .event-card {
-  width: 300px;
-  background-color: #f9f9f9;
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 1rem 0; /* Add margin to improve spacing */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
 }
 
 .event-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  .event-cards {
-    flex-direction: column;
-    align-items: center;
-  }
+.event-details h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
 
-  .event-card {
-    width: 90%;
-  }
+.event-details p {
+  color: #666;
 }
 
 /* Membership Section */
 .membership-section {
-  padding: 3rem;
+  padding: 50px 20px;
   text-align: center;
+  background-color: #fff3e0;
 }
 
 .membership-card {
-  background-color: #eaf4fc;
-  padding: 2rem;
-  border-radius: 10px;
   display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
 }
 
 .membership-icon {
   font-size: 3rem;
-  color: #3498db;
-  margin-bottom: 1rem;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.membership-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.membership-card p {
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .join-btn {
-  background-color: #3498db;
+  background-color: #ff9800;
   color: white;
-  padding: 0.75rem 1.5rem;
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
@@ -193,11 +222,17 @@
 }
 
 .join-btn:hover {
-  background-color: #2980b9;
+  background-color: #e68a00;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .membership-card {
-    width: 90%;
+  .services-grid, .video-grid, .event-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    max-width: 100%;
   }
 }

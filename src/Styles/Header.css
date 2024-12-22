@@ -1,137 +1,141 @@
-/* General styling */
-.header-menu {
-  display: inline-block;
-  justify-content: space-between; /* Keep elements spaced apart on larger screens */
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.header-social {
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  background: blue;
-  padding: 10px 20px;
-  align-items: center;
-
-}
-.header-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 20px;
-  border-bottom: 2px solid #ccc;
-  position: relative;
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-   
-  
-}
-.contact-info p {
+/* General Styles */
+* {
   margin: 0;
-  text-decoration: none;
-  color: black;
+  padding: 0;
+  box-sizing: border-box;
 }
-.contact-info a {
-  /* margin-left: 5px; */
-  color: black} 
 
+header {
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+}
+
+/* Header Social Section */
+.header-social {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.header-social a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-social a:hover {
+  text-decoration: underline;
+}
+
+/* Header Menu Section */
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Section */
 .logo-container {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  width: 60px;
-  height: auto;
+  height: 50px;
+  width: auto;
   margin-right: 10px;
 }
 
 .church-name {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333;
 }
 
-/* Social media links */
-.social-media-links a {
-  color: black;
-  text-decoration: none;
-  margin-left: 10px;
+/* Navigation Menu */
+nav {
+  display: flex;
+  align-items: center;
 }
 
-/* Navigation links */
 .nav-links {
-  display: flex;
   list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
 }
 
 .nav-links li {
-  margin-left: 20px;
+  margin: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1rem;
 }
 
-/* Hamburger menu icon (hidden by default) */
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* Giving Link Special Style */
+.giving-link {
+  color: #ff9800;
+  font-weight: bold;
+  border: 2px solid #ff9800;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.giving-link:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Menu Icon (Mobile Only) */
 .menu-icon {
   display: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #333;
   cursor: pointer;
 }
 
-/* Responsive styles for screens 992px and below */
-@media (max-width: 992px) {
-  /* Change layout of header-menu */
-  .header-menu {
-    flex-direction: row; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
-  }
+/* Mobile Menu */
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  z-index: 999;
+}
 
-  .logo-container {
-    margin-bottom: 10px; /* Add some spacing between logo and menu */
-  }
+.nav-links.open li {
+  margin: 10px 0;
+}
 
-  /* Hamburger icon (visible on smaller screens) */
-  .menu-icon {
-    display: block; /* Show the hamburger menu icon */
-  }
-
-  /* Move the header-social section below the header menu */
-  .header-social {
-    order: 2; /* Reorder the social section */
-    justify-content: flex-start; /* Align the contact and social icons to the start */
-    flex-direction: column;
-    align-items: flex-start; /* Stack elements vertically */
-  }
-
-  .social-media-links {
-    margin-top: 10px;
-  }
-
-  /* Navigation links are hidden by default on smaller screens */
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav-links {
     display: none;
-    flex-direction: column;
-    width: 100%;
   }
 
-  /* Show the menu when open */
-  .nav-links.open {
-    display: flex;
-  }
-
-  /* Align navigation links vertically */
-  .nav-links li {
-    margin: 10px 0;
-    text-align: left;
+  .menu-icon {
+    display: block;
   }
 }

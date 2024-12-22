@@ -8,9 +8,10 @@ import Giving from './components/Giving';
 import Contact from './components/Contact';
 // import './App.css'; 
 // import './index.css'
-import './utils.css'
-// import '/modern-normalize.css'
+import './Styles/utils.css'
+// import './Styles/modern-normalize.css'
 import Footer from './components/Footer';
+import HomeCarousel from './components/HomeCarousel';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/ministries" element={<Ministries />} />
             <Route path="/giving" element={<Giving />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/carousel" element={<HomeCarousel/>} />
           </Routes>
         </main>
         <Footer/>

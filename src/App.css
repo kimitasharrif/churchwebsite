@@ -13,82 +13,6 @@ html, body {
 
 
 
-/* Section styling */
-.section {
-  margin-top: 0;
-
-}
-
-
-.about-section {
-  position: relative; /* Allow positioning of the overlay */
-}
-
-.aboutlogo {
-  width: 100%; /* Adjust according to your design */
-}
-
-.about-logo {
-  width: 100%;
-  height: 600px; /* Adjust the height as needed */
-}
-
-/* Overlay styling */
-.overlay {
-  position: absolute; /* Position overlay on top of the image */
-  top: 20%; /* Position from the top (adjust as needed) */
-  left: 5%; /* Position from the left side */
-  width: 400px; /* Set a width for the overlay */
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: rgb(8, 195, 241); /* Text color */
-  padding: 20px; /* Padding around text */
-  border-radius: 10px; /* Rounded corners for the overlay */
-  z-index: 1; /* Ensure overlay is above the image */
-}
-
-.overlay h1 {
-  font-size: 25px; /* Font size for the header */
-  margin-bottom: 10px; /* Space below the header */
-}
-
-.overlay p {
-  margin: 5px 0; /* Space between links */
-}
-
-/* Style the links */
-.overlay a {
-  color: #FFD700; /* Change the link color to gold or another color */
-  text-decoration: underline; 
-  font-size: 25px;/* Underline the links */
-}
-.overlay h1{
-  font-size: 33px;
-}
-
-.about-content {
-  position: relative; /* To keep the content separate from the overlay */
-  z-index: 2; /* Ensure content is above the overlay */
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-}
-.about-content h1 {
-  font-weight: bold;  /* Makes the text bold */
-  color: blue;  /* Changes the text color to blue */
-  font-family: 'Georgia', serif;  /* Change the font style to Georgia */
-  font-size: px; /* Optional: Adjust the font size */
-  
-}
-.about-content p {
-  font-weight: 400;
-  line-height: 26px;
-  font-size: 16px;
-  color: #6a7a83;
-  font-family: "Rubik", sans-serif;
-}
-
-
-
 
 
 .ministries-section {
@@ -319,7 +243,7 @@ html, body {
   margin-top: 40px;
 }
 
-.card {
+.event-card {
   width: 30%;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

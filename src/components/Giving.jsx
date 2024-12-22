@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import home from '../assets/bg/mountain.jpg'; 
+import home from '../assets/images/mountain.jpg'; 
 import '../Styles/Giving.css';  // Assuming this is your CSS file
 
 const Giving = () => {
